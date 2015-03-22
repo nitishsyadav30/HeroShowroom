@@ -951,3 +951,474 @@ Stack trace:
 REQUEST_URI=/heroshowroom/index.php/customers/faq.html
 HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/guidely.html
 ---
+2015/03/22 07:05:46 [error] [php] Object of class CJuiDatePicker could not be converted to string (C:\wamp\www\heroshowroom\protected\views\customers\_form.php:72)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#1 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CustomersController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CustomersController->renderPartial()
+#6 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CustomersController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CustomersController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CustomersController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CustomersController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\heroshowroom\index.php(13): CWebApplication->run()
+REQUEST_URI=/heroshowroom/index.php/customers/create
+in C:\wamp\www\heroshowroom\protected\views\customers\_form.php (72)
+in C:\wamp\www\heroshowroom\protected\views\customers\create.php (15)
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (79)
+2015/03/22 07:06:09 [error] [php] Object of class CJuiDatePicker could not be converted to string (C:\wamp\www\heroshowroom\protected\views\customers\_form.php:69)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#1 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CustomersController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CustomersController->renderPartial()
+#6 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CustomersController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CustomersController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CustomersController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CustomersController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\heroshowroom\index.php(13): CWebApplication->run()
+REQUEST_URI=/heroshowroom/index.php/customers/create
+in C:\wamp\www\heroshowroom\protected\views\customers\_form.php (69)
+in C:\wamp\www\heroshowroom\protected\views\customers\create.php (15)
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (79)
+2015/03/22 07:48:18 [error] [exception.CException] exception 'CException' with message 'Property "Customers.file" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('file')
+#1 C:\wamp\www\yii\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('file')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(Customers), 'file')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Customers), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(73): CActiveRecord->save()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#17 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/create
+---
+2015/03/22 07:49:41 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 07:49:41 [error] [exception.CException] exception 'CException' with message 'Property "Customers.file" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('file')
+#1 C:\wamp\www\yii\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('file')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(Customers), 'file')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Customers), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(73): CActiveRecord->save()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#17 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/create
+---
+2015/03/22 08:18:45 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 08:18:45 [error] [exception.CException] exception 'CException' with message 'Property "Customers.file" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('file')
+#1 C:\wamp\www\yii\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('file')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(Customers), 'file')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Customers), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(73): CActiveRecord->save()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#17 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/create
+---
+2015/03/22 08:20:13 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 08:20:13 [error] [exception.CException] exception 'CException' with message 'Property "Customers.file" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('file')
+#1 C:\wamp\www\yii\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('file')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(Customers), 'file')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Customers), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(73): CActiveRecord->save()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#17 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/create
+---
+2015/03/22 08:21:59 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 08:22:21 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 08:22:27 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:10:14 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:11:16 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:13:36 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:13:36 [error] [exception.CException] exception 'CException' with message 'Property "Customers.file" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('file')
+#1 C:\wamp\www\yii\framework\validators\CRequiredValidator.php(58): CActiveRecord->__get('file')
+#2 C:\wamp\www\yii\framework\validators\CValidator.php(213): CRequiredValidator->validateAttribute(Object(Customers), 'file')
+#3 C:\wamp\www\yii\framework\base\CModel.php(159): CValidator->validate(Object(Customers), NULL)
+#4 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(73): CActiveRecord->save()
+#6 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#7 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#17 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/create
+---
+2015/03/22 12:13:46 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:14:01 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:27:39 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:30:34 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:30:49 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:31:03 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 12:32:12 [error] [exception.CException] exception 'CException' with message 'Property "CNumberValidator.range" is not defined.' in C:\wamp\www\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\wamp\www\yii\framework\validators\CValidator.php(189): CComponent->__set('range', Array)
+#1 C:\wamp\www\yii\framework\base\CModel.php(287): CValidator::createValidator('numerical', Object(Customers), 'c_mobile', Array)
+#2 C:\wamp\www\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\wamp\www\yii\framework\base\CModel.php(547): CModel->getValidators()
+#4 C:\wamp\www\yii\framework\base\CModel.php(468): CModel->getSafeAttributeNames()
+#5 C:\wamp\www\yii\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#6 C:\wamp\www\yii\framework\db\ar\CActiveRecord.php(161): CComponent->__set('attributes', Array)
+#7 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(72): CActiveRecord->__set('attributes', Array)
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+HTTP_REFERER=http://localhost/heroshowroom/index.php/customers/create
+---
+2015/03/22 12:33:33 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:03:13 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:09:21 [error] [exception.CException] exception 'CException' with message 'Alias "widgets.timepicker.timepicker" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('widgets.timepic...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CustomersController), 'widgets.timepic...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('widgets.timepic...', Array)
+#3 C:\wamp\www\heroshowroom\protected\views\customers\_form.php(65): CBaseController->widget('widgets.timepic...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\her...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\her...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\her...', Array, true)
+#7 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\her...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\her...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\her...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+---
+2015/03/22 14:09:43 [error] [exception.CException] exception 'CException' with message 'Alias "widgets.timepicker" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\yii\framework\YiiBase.php:347
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CWidgetFactory.php(146): YiiBase::import('widgets.timepic...', true)
+#1 C:\wamp\www\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(CustomersController), 'widgets.timepic...', Array)
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(172): CBaseController->createWidget('widgets.timepic...', Array)
+#3 C:\wamp\www\heroshowroom\protected\views\customers\_form.php(65): CBaseController->widget('widgets.timepic...', Array)
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\her...')
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\her...', Array, true)
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\her...', Array, true)
+#7 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require('C:\wamp\www\her...')
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\wamp\www\her...', Array, true)
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\wamp\www\her...', Array, true)
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CController->render('create', Array)
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('customers/creat...')
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\heroshowroom\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/heroshowroom/index.php/customers/create
+---
+2015/03/22 14:10:58 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:11:49 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:16:51 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:17:24 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:33:10 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:33:21 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:34:02 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:34:09 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:34:56 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:35:22 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:43:55 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 14:43:55 [error] [php] Undefined variable: locations (C:\wamp\www\heroshowroom\protected\views\customers\_form.php:62)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#1 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CustomersController->renderPartial()
+#2 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#4 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#5 C:\wamp\www\yii\framework\web\CController.php(782): CustomersController->renderPartial()
+#6 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CustomersController->render()
+#7 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#8 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CustomersController->runAction()
+#10 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CustomersController->filterAccessControl()
+#13 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\wamp\www\yii\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#16 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CustomersController->run()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 C:\wamp\www\heroshowroom\index.php(13): CWebApplication->run()
+REQUEST_URI=/heroshowroom/index.php/customers/create
+in C:\wamp\www\heroshowroom\protected\views\customers\_form.php (62)
+in C:\wamp\www\heroshowroom\protected\views\customers\create.php (15)
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (79)
+2015/03/22 14:44:08 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:05:45 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:05:45 [error] [php] Use of undefined constant i - assumed 'i' (C:\wamp\www\heroshowroom\protected\components\CommonFunctions.php:14)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#1 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#2 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CustomersController->renderPartial()
+#3 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#5 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#6 C:\wamp\www\yii\framework\web\CController.php(782): CustomersController->renderPartial()
+#7 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CustomersController->render()
+#8 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#9 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CustomersController->runAction()
+#11 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#13 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CustomersController->filterAccessControl()
+#14 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#15 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\wamp\www\yii\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#17 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CustomersController->run()
+#18 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 C:\wamp\www\heroshowroom\index.php(13): CWebApplication->run()
+REQUEST_URI=/heroshowroom/index.php/customers/create
+in C:\wamp\www\heroshowroom\protected\components\CommonFunctions.php (14)
+in C:\wamp\www\heroshowroom\protected\views\customers\_form.php (62)
+in C:\wamp\www\heroshowroom\protected\views\customers\create.php (15)
+2015/03/22 15:06:00 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:14:41 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:17:27 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:18:32 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:18:32 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\yii\framework\web\helpers\CHtml.php:103)
+Stack trace:
+#0 C:\wamp\www\yii\framework\web\helpers\CHtml.php(158): renderAttributes()
+#1 C:\wamp\www\yii\framework\web\helpers\CHtml.php(1822): tag()
+#2 C:\wamp\www\yii\framework\web\widgets\CActiveForm.php(847): activeDropDownList()
+#3 C:\wamp\www\heroshowroom\protected\views\customers\_form.php(63): CActiveForm->dropDownList()
+#4 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#5 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#6 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#7 C:\wamp\www\heroshowroom\protected\views\customers\create.php(15): CustomersController->renderPartial()
+#8 C:\wamp\www\yii\framework\web\CBaseController.php(126): require()
+#9 C:\wamp\www\yii\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#10 C:\wamp\www\yii\framework\web\CController.php(869): CustomersController->renderFile()
+#11 C:\wamp\www\yii\framework\web\CController.php(782): CustomersController->renderPartial()
+#12 C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php(79): CustomersController->render()
+#13 C:\wamp\www\yii\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#14 C:\wamp\www\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(133): CustomersController->runAction()
+#16 C:\wamp\www\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 C:\wamp\www\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#18 C:\wamp\www\yii\framework\web\filters\CInlineFilter.php(58): CustomersController->filterAccessControl()
+#19 C:\wamp\www\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#20 C:\wamp\www\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 C:\wamp\www\yii\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#22 C:\wamp\www\yii\framework\web\CWebApplication.php(282): CustomersController->run()
+#23 C:\wamp\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\wamp\www\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 C:\wamp\www\heroshowroom\index.php(13): CWebApplication->run()
+REQUEST_URI=/heroshowroom/index.php/customers/create
+in C:\wamp\www\heroshowroom\protected\views\customers\_form.php (63)
+in C:\wamp\www\heroshowroom\protected\views\customers\create.php (15)
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (79)
+2015/03/22 15:18:59 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:19:47 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:25:51 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:33:04 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:37:23 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)
+2015/03/22 15:38:02 [warning] [application] Failed to set unsafe attribute "file" of "Customers".
+in C:\wamp\www\heroshowroom\protected\controllers\CustomersController.php (72)
+in C:\wamp\www\heroshowroom\index.php (13)

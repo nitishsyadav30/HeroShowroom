@@ -7,7 +7,9 @@
 
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_css/bootstrap.min.css" rel="stylesheet" />
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_css/bootstrap-responsive.min.css" rel="stylesheet" />
-
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_js/jquery-1.7.2.min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_js/bootstrap.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_js/base.js"></script>
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_css/font-awesome.css" rel="stylesheet"/>
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_css/base-admin.css" rel="stylesheet" />
@@ -165,6 +167,4 @@
         </div> <!-- /footer -->
     </body>
 </html>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_js/jquery-1.7.2.min.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_js/bootstrap.js"></script>
-<script src="<?php echo Yii::app()->request->baseUrl; ?>/css/theme_js/base.js"></script>
+

@@ -45,7 +45,7 @@
                                                     <?php echo $form->error($model, 'c_bill_id'); ?>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="control-group">	
                                                 <?php echo $form->labelEx($model, 'c_name', array('class' => 'control-label')); ?>    
                                                 <div class="controls">
@@ -59,14 +59,9 @@
                                                 <?php echo $form->labelEx($model, 'c_date_of_birth', array('class' => 'control-label')); ?>
                                                 <div class="controls">
                                                     <?php
-                                                    $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-                                                        'model' => $model,
-                                                        'attribute' => 'c_date_of_birth',
-                                                        'htmlOptions' => array(
-                                                            'size' => '10', // textField size
-                                                            'maxlength' => '10', // textField maxlength
-                                                        ),
-                                                    ));
+                                                    echo $form->dropDownList($model,'c_date_of_birth',  CommonFunctions::getDays(), array('style'=>'width:55px'));
+                                                    echo $form->dropDownList($model,'c_date_of_birth',  CommonFunctions::getMonths(), array('style'=>'width:75px'));
+                                                    echo $form->dropDownList($model,'c_date_of_birth',  CommonFunctions::getYears(), array('style'=>'width:60px'));
                                                     ?>
                                                     <?php echo $form->error($model, 'c_date_of_birth'); ?>
                                                 </div>
@@ -148,7 +143,7 @@
                                     <i class="shortcut-icon icon-adjust"></i>
                                     <span class="shortcut-label">Manage Customers</span>
                                 </a>
-                                
+
 
                             </div> <!-- /shortcuts -->	
                         </div> <!-- /widget-content -->
