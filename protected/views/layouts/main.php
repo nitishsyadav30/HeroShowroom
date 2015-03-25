@@ -33,7 +33,7 @@
                         <span class="icon-bar"></span>
                     </a>
 
-                    <a class="brand" href="#">
+                    <a class="brand" href="<?php echo Yii::app()->request->baseUrl;?>/index.php">
                         ARIHANT MOTORS				
                     </a>		
 
@@ -43,7 +43,7 @@
                                 <li class="dropdown">
 
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
+                                        <i class="icon-cog"></i>
                                         Settings
                                         <b class="caret"></b>
                                     </a>
@@ -56,10 +56,10 @@
                             <?php } ?>
 
                             <?php if (!Yii::app()->user->isGuest) { ?>
-                                <li class="dropdown">
-
+                            <li class="dropdown" >
+                                    
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
+                                        <i class="icon-user"></i>
                                         <?php echo Yii::app()->user->name; ?> 
                                         <b class="caret"></b>
                                     </a>
@@ -99,21 +99,21 @@
 
                     <ul class="mainnav">
 
-                        <li class="active">
-                            <a href="#">
+                        <li >
+                            <a href="<?php echo Yii::app()->request->baseUrl;?>/index.php">
                                 <i class="icon-home"></i>
                                 <span>Home</span>
                             </a>	    				
                         </li>
 
                         <li>
-                            <a href="./faq.html">
+                            <a href="<?php echo Yii::app()->createUrl('vehicles/admin'); ?>">
                                 <i class="icon-book"></i>
                                 <span>Inventory/Stocks</span>
                             </a>	    				
                         </li>
 
-                        <li>					
+                        <li >					
                             <a href="<?php echo Yii::app()->createUrl('customers/admin'); ?>" class="dropdown-toggle">
                                 <i class="icon-user"></i>
                                 <span>Customer Management</span>

@@ -14,7 +14,7 @@
 
                         <div class="widget-header">
                             <i class="icon-user"></i>
-                            <h3>Add Customer</h3>
+                           <?php if (!isset($model->c_id)){?> <h3>Add Customer</h3><?php } else{?><h3>Update Customer: <?php echo $model->c_name."(" . $model->c_id .")"; ?></h3><?php } ?>
                         </div> <!-- /widget-header -->
 
                         <div class="widget-content">
@@ -25,6 +25,7 @@
                                         $form = $this->beginWidget('CActiveForm', array(
                                             'id' => 'customers-form',
                                             'htmlOptions' => array(
+                                                'enctype' => 'multipart/form-data',
                                                 'class' => 'form-horizontal'),
                                             // Please note: When you enable ajax validation, make sure the corresponding
                                             // controller action is handling ajax validation correctly.
@@ -59,11 +60,11 @@
                                                 <?php echo $form->labelEx($model, 'c_date_of_birth', array('class' => 'control-label')); ?>
                                                 <div class="controls">
                                                     <?php
-                                                    echo $form->dropDownList($model,'c_date_of_birth',  CommonFunctions::getDays(), array('style'=>'width:55px'));
-                                                    echo $form->dropDownList($model,'c_date_of_birth',  CommonFunctions::getMonths(), array('style'=>'width:75px'));
-                                                    echo $form->dropDownList($model,'c_date_of_birth',  CommonFunctions::getYears(), array('style'=>'width:60px'));
+                                                    echo $form->dropDownList($model,'day',  CommonFunctions::getDays(), array('style'=>'width:55px'));
+                                                    echo $form->dropDownList($model,'month',  CommonFunctions::getMonths(), array('style'=>'width:75px'));
+                                                    echo $form->dropDownList($model,'year',  CommonFunctions::getYears(), array('style'=>'width:60px'));
                                                     ?>
-                                                    <?php echo $form->error($model, 'c_date_of_birth'); ?>
+                                                    
                                                 </div>
                                             </div>
 
@@ -106,16 +107,13 @@
                                                     <?php echo $form->error($model, 'c_mobile'); ?>
                                                 </div>
                                             </div>
-
                                             <div class="control-group">
                                                 <?php echo $form->labelEx($model, 'file', array('class' => 'control-label')); ?>
                                                 <div class="controls">
-                                                    <?php echo $form->fileField($model, 'file', array('class' => 'btn btn-warning')); ?>
-                                                    <p class="help-block">Upload only zip files</p>
+                                                    <?php echo $form->fileField($model, 'file'); ?>
                                                     <?php echo $form->error($model, 'file'); ?>
                                                 </div>
                                             </div>
-
                                             <div class="form-actions">
                                                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-primary')); ?>
                                             </div>
@@ -140,7 +138,7 @@
                         <div class="widget-content">
                             <div class="shortcuts">
                                 <a href="<?php echo Yii::app()->createUrl('customers/admin'); ?>" class="shortcut">
-                                    <i class="shortcut-icon icon-adjust"></i>
+                                    <i class="shortcut-icon icon-cogs"></i>
                                     <span class="shortcut-label">Manage Customers</span>
                                 </a>
 

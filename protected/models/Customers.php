@@ -13,7 +13,7 @@
  * @property string $c_country
  * @property string $c_mobile
  * @property string $c_file_path
- * @property string $file
+ * 
  */
 class Customers extends CActiveRecord {
 
@@ -21,6 +21,7 @@ class Customers extends CActiveRecord {
      * @return string the associated database table name
      */
     public $file;
+    public $day,$month,$year;
 
     public function tableName() {
         return '{{customers}}';
@@ -33,12 +34,11 @@ class Customers extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('c_name,  c_address, c_city, c_state, c_country, c_mobile,c_bill_id', 'required'),
-            array('c_date_of_birth', 'date'),
-            array('file', 'file', 'types' => 'zip , rar'),
+            array('c_name,  c_address, c_city, c_state, c_country, c_mobile,c_bill_id, day, month, year', 'required'),
             array('c_name', 'length', 'max' => 50),
             array('c_city, c_state, c_country', 'length', 'max' => 15),
-            array('c_mobile', 'numerical','integerOnly'=>true, 'min' => 10,'max'=>10),
+            array('c_mobile', 'numerical'),
+            array('file', 'file','types'=>'pdf'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
             array('c_id, c_bill_id, c_name, c_date_of_birth, c_address, c_city, c_state, c_country, c_mobile', 'safe', 'on' => 'search'),
@@ -100,8 +100,8 @@ class Customers extends CActiveRecord {
         $criteria->compare('c_state', $this->c_state, true);
         $criteria->compare('c_country', $this->c_country, true);
         $criteria->compare('c_mobile', $this->c_mobile, true);
-       // $criteria->compare('c_file_path', $this->c_file_path, true);
-       // $criteria->compare('file', $this->file, true);
+        $criteria->compare('file', $this->file, true);
+       
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
@@ -115,6 +115,10 @@ class Customers extends CActiveRecord {
      */
     public static function model($className = __CLASS__) {
         return parent::model($className);
+    }
+    
+    public function mobileExistError(){
+        $this->addError('c_mobile', 'Mobile number already exist!!');
     }
 
 }

@@ -1,13 +1,11 @@
 <?php
-/* @var $this CustomersController */
-/* @var $model Customers */
+/* @var $this VehiclesController */
+/* @var $model Vehicles */
 
 $this->breadcrumbs = array(
-    'Customers' => array('index'),
+    'Vehicles' => array('index'),
     'Manage',
 );
-
-
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){
@@ -15,7 +13,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#customers-grid').yiiGridView('update', {
+	$('#vehicles-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -33,29 +31,38 @@ $('.search-form form').submit(function(){
 
                         <div class="widget-header">
                             <i class="icon-th-list"></i>
-                            <h3>Customers</h3>
+                            <h3>Vehicles/Stock</h3>
                             <button type="button" class="btn" data-toggle="modal" data-target="#myModal">
                                 Advanced Search
                             </button>
                         </div> <!-- /widget-header -->
 
                         <div class="widget-content">
-
                             <?php
                             $this->widget('zii.widgets.grid.CGridView', array(
-                                'id' => 'customers-grid',
+                                'id' => 'vehicles-grid',
                                 'dataProvider' => $model->search(),
                                 'filter' => $model,
                                 'columns' => array(
-                                    'c_name',
-                                    'c_bill_id',
-                                    'c_mobile',
-                                    'c_city',
-                                    
+                                    'vehicle_id',
+                                    'vehicle_name',
+                                    'vehicle_model',
+                                    'vehicle_make',
+                                    'vehicle_year',
+                                    'vehicle_color',
                                     /*
-                                      'c_country',
-                                      'c_mobile',
-                                      'c_file_path',
+                                      'vehicle_key_no',
+                                      'vehicle_frame_no',
+                                      'vehicle_engine_no',
+                                      'vehicle_battery_make',
+                                      'vehicle_battery_no',
+                                      'vehicle_price',
+                                      'vehicle_quantity',
+                                      'vehicle_description',
+                                      'added_on',
+                                      'fk_added_by',
+                                      'updated_on',
+                                      'fk_updated_by',
                                      */
                                     array(
                                         'class' => 'CButtonColumn',
@@ -66,7 +73,7 @@ $('.search-form form').submit(function(){
 
                         </div>
                     </div>
-                </div>  <!--Span 7-->
+                </div><!--Span 7-->
                 <div class="span4">
 
 
@@ -79,9 +86,9 @@ $('.search-form form').submit(function(){
 
                         <div class="widget-content">
                             <div class="shortcuts">
-                                <a href="<?php echo Yii::app()->createUrl('customers/create'); ?>" class="shortcut">
+                                <a href="<?php echo Yii::app()->createUrl('vehicles/create'); ?>" class="shortcut">
                                     <i class="shortcut-icon icon-plus"></i>
-                                    <span class="shortcut-label">Add Customers</span>
+                                    <span class="shortcut-label">Add Vehicles/<br />Stock</span>
                                 </a>
 
 
@@ -91,12 +98,10 @@ $('.search-form form').submit(function(){
                     </div> <!-- /widget-box -->
 
                 </div> <!-- /span4 -->
-            </div>    
-        </div>   
-    </div>    
+            </div>
+        </div>
+    </div>
 </div>
-
-
 
 
 

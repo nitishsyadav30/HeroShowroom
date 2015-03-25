@@ -27,7 +27,9 @@
 /*------------------------------------------------------------------
 [1. Global]
 */
-
+.errorMessage{
+    color: red;
+}
 body {
 	background: #E9E9E9 url(../img/body-bg.png) repeat 0 0;
 	font: 13px/1.7em 'Open Sans';
@@ -222,7 +224,7 @@ textarea {
 }
 
 
-.subnavbar .container > ul > li.active > a {
+.subnavbar  .container > ul > li.active > a {
 	background: #333;
 	color: #F90;
 }
