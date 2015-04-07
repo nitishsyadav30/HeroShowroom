@@ -34,10 +34,11 @@ class Customers extends CActiveRecord {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
         return array(
-            array('c_name,  c_address, c_city, c_state, c_country, c_mobile,c_bill_id, day, month, year', 'required'),
+            array('c_name,  c_address, c_city, c_state, c_country, c_mobile, day, month, year', 'required'),
             array('c_name', 'length', 'max' => 50),
             array('c_city, c_state, c_country', 'length', 'max' => 15),
             array('c_mobile', 'numerical'),
+            array('c_mobile', 'unique', 'message' =>"This mobile number already exists."),
             array('file', 'file','types'=>'pdf'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.
@@ -61,7 +62,7 @@ class Customers extends CActiveRecord {
     public function attributeLabels() {
         return array(
             'c_id' => 'C',
-            'c_bill_id' => 'Bill Number',
+            
             'c_name' => 'Customer Name',
             'c_date_of_birth' => 'Date Of Birth',
             'c_address' => 'Address',
@@ -92,7 +93,7 @@ class Customers extends CActiveRecord {
         $criteria = new CDbCriteria;
 
         $criteria->compare('c_id', $this->c_id);
-        $criteria->compare('c_bill_id', $this->c_bill_id);
+        
         $criteria->compare('c_name', $this->c_name, true);
         $criteria->compare('c_date_of_birth', $this->c_date_of_birth, true);
         $criteria->compare('c_address', $this->c_address, true);
@@ -117,8 +118,7 @@ class Customers extends CActiveRecord {
         return parent::model($className);
     }
     
-    public function mobileExistError(){
-        $this->addError('c_mobile', 'Mobile number already exist!!');
-    }
-
+   
+    
+    
 }

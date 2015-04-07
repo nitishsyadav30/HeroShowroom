@@ -38,14 +38,7 @@
                                         <fieldset>
 
                                             <?php echo $form->errorSummary($model); ?>
-                                            <div class="control-group">	
-                                                <?php echo $form->labelEx($model, 'c_bill_id', array('class' => 'control-label')); ?>    
-                                                <div class="controls">
-
-                                                    <?php echo $form->textField($model, 'c_bill_id', array('size' => 50, 'maxlength' => 50, 'class' => 'input-medium')); ?>
-                                                    <?php echo $form->error($model, 'c_bill_id'); ?>
-                                                </div>
-                                            </div>
+                                            
 
                                             <div class="control-group">	
                                                 <?php echo $form->labelEx($model, 'c_name', array('class' => 'control-label')); ?>    
@@ -61,7 +54,7 @@
                                                 <div class="controls">
                                                     <?php
                                                     echo $form->dropDownList($model,'day',  CommonFunctions::getDays(), array('style'=>'width:55px'));
-                                                    echo $form->dropDownList($model,'month',  CommonFunctions::getMonths(), array('style'=>'width:75px'));
+                                                    echo $form->dropDownList($model,'month',  CommonFunctions::getMonths(), array('style'=>'width:90px'));
                                                     echo $form->dropDownList($model,'year',  CommonFunctions::getYears(), array('style'=>'width:60px'));
                                                     ?>
                                                     
@@ -104,7 +97,7 @@
                                                 <?php echo $form->labelEx($model, 'c_mobile', array('class' => 'control-label')); ?>
                                                 <div class="controls">
                                                     <?php echo $form->textField($model, 'c_mobile', array('size' => 20, 'maxlength' => 20)); ?>
-                                                    <?php echo $form->error($model, 'c_mobile'); ?>
+                                                    <?php echo $form->error($model, 'c_mobile');?>
                                                 </div>
                                             </div>
                                             <div class="control-group">

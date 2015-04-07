@@ -33,8 +33,8 @@
                         <span class="icon-bar"></span>
                     </a>
 
-                    <a class="brand" href="<?php echo Yii::app()->request->baseUrl;?>/index.php">
-                        ARIHANT MOTORS				
+                    <a class="brand" href="<?php echo Yii::app()->request->baseUrl; ?>/index.php">
+                        <img src="<?php echo Yii::app()->request->baseUrl; ?>/images/slider/logo.jpg" width="25px" /> ARIHANT MOTORS				
                     </a>		
 
                     <div class="nav-collapse">
@@ -49,15 +49,15 @@
                                     </a>
 
                                     <ul class="dropdown-menu">
-                                        <li><a href="javascript:;">Account Settings</a></li>
+                                        <li><a href="<?php echo Yii::app()->createUrl('user/admin/update/id/'.Yii::app()->user->id);?>">Account Settings</a></li>
                                     </ul>
 
                                 </li>
                             <?php } ?>
 
                             <?php if (!Yii::app()->user->isGuest) { ?>
-                            <li class="dropdown" >
-                                    
+                                <li class="dropdown" >
+
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                         <i class="icon-user"></i>
                                         <?php echo Yii::app()->user->name; ?> 
@@ -65,7 +65,7 @@
                                     </a>
 
                                     <ul class="dropdown-menu">
-                                        <li><a href="javascript:;">My Profile</a></li>
+                                        <li><a href="<?php echo Yii::app()->createUrl('user/profile/edit');?>">My Profile</a></li>
 
                                         <li class="divider"></li>
                                         <li><?php echo CHtml::link('Logout', Yii::app()->createurl('/user/logout')) ?></li>
@@ -74,7 +74,7 @@
                                 </li>
                             <?php } ?><?php if (Yii::app()->user->isGuest) { ?>
                                 <li class="toggle">
-                                    <?php echo CHtml::link('Login/SignUp', Yii::app()->createurl('user/login')) ?>
+                                    <?php echo CHtml::link('<i class="icon-user"></i> Login/SignUp', Yii::app()->createurl('user/login')) ?>
                                 </li>
                             <?php } ?>
                         </ul>
@@ -100,17 +100,22 @@
                     <ul class="mainnav">
 
                         <li >
-                            <a href="<?php echo Yii::app()->request->baseUrl;?>/index.php">
+                            <a href="<?php echo Yii::app()->request->baseUrl; ?>/index.php">
                                 <i class="icon-home"></i>
                                 <span>Home</span>
                             </a>	    				
                         </li>
 
-                        <li>
-                            <a href="<?php echo Yii::app()->createUrl('vehicles/admin'); ?>">
+                        <li class="dropdown">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="icon-book"></i>
                                 <span>Inventory/Stocks</span>
-                            </a>	    				
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo Yii::app()->createUrl('vehicles/admin'); ?>">Vehicle Inventory</a></li>
+                                <li><a href="<?php echo Yii::app()->createUrl('vehicleAccesories/admin'); ?>">Spare-Parts Inventory</a></li>
+                            </ul> 
                         </li>
 
                         <li >					
@@ -129,7 +134,7 @@
 
                         <li>					
                             <a href="./guidely.html">
-                                <i class="icon-file"></i>
+                                <i class="icon-shopping-cart"></i>
                                 <span>Sales</span>
                             </a>  									
                         </li>

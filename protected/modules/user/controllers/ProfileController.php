@@ -12,14 +12,14 @@ class ProfileController extends Controller
 	/**
 	 * Shows a particular model.
 	 */
-	public function actionProfile()
-	{
-		$model = $this->loadUser();
-	    $this->render('profile',array(
-	    	'model'=>$model,
-			'profile'=>$model->profile,
-	    ));
-	}
+//	public function actionProfile()
+//	{
+//		$model = $this->loadUser();
+//	    $this->render('profile',array(
+//	    	'model'=>$model,
+//			'profile'=>$model->profile,
+//	    ));
+//	}
 
 
 	/**

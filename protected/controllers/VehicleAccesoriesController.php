@@ -37,7 +37,7 @@ class VehicleAccesoriesController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('admin','demo'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -69,8 +69,11 @@ class VehicleAccesoriesController extends Controller
 
 		if(isset($_POST['VehicleAccesories']))
 		{
+                       
 			$model->attributes=$_POST['VehicleAccesories'];
-			if($model->save())
+			$model->fk_added_by = Yii::app()->user->id;
+                        $model->added_on =  CommonFunctions::getCurrentTimeStamp();
+                        if($model->save())
 				$this->redirect(array('view','id'=>$model->accessory_id));
 		}
 
@@ -94,6 +97,8 @@ class VehicleAccesoriesController extends Controller
 		if(isset($_POST['VehicleAccesories']))
 		{
 			$model->attributes=$_POST['VehicleAccesories'];
+                        $model->fk_updated_by = Yii::app()->user->id;
+                        $model->updated_on =  CommonFunctions::getCurrentTimeStamp();
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->accessory_id));
 		}

@@ -37,7 +37,7 @@ class VehiclesController extends Controller
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
 				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
+				'users'=>array('admin','demo'),
 			),
 			array('deny',  // deny all users
 				'users'=>array('*'),
@@ -70,6 +70,8 @@ class VehiclesController extends Controller
 		if(isset($_POST['Vehicles']))
 		{
 			$model->attributes=$_POST['Vehicles'];
+                        $model->added_on= CommonFunctions::getCurrentTimeStamp();
+                        $model->fk_added_by= Yii::app()->user->id; 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->vehicle_id));
 		}
@@ -94,6 +96,8 @@ class VehiclesController extends Controller
 		if(isset($_POST['Vehicles']))
 		{
 			$model->attributes=$_POST['Vehicles'];
+                        $model->updated_on= CommonFunctions::getCurrentTimeStamp();
+                        $model->fk_updated_by= Yii::app()->user->id; 
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->vehicle_id));
 		}

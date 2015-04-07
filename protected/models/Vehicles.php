@@ -51,6 +51,7 @@ class Vehicles extends CActiveRecord
 			array('vehicle_quantity, fk_added_by, fk_updated_by', 'numerical', 'integerOnly'=>true),
 			array('vehicle_price', 'numerical'),
 			array('vehicle_name, vehicle_model', 'length', 'max'=>200),
+                        
 			array('vehicle_make', 'length', 'max'=>50),
 			array('vehicle_year', 'length', 'max'=>10),
 			array('vehicle_color', 'length', 'max'=>20),

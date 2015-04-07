@@ -1,4 +1,5 @@
 <?php
+// hidden view
 $this->breadcrumbs=array(
 	UserModule::t("Users"),
 );
@@ -11,7 +12,7 @@ if(UserModule::isAdmin()) {
 }
 ?>
 
-<h1><?php echo UserModule::t("List User"); ?></h1>
+<h1><?php echo UserModule::t("Lista User"); ?></h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,

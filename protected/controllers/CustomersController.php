@@ -35,7 +35,7 @@ class CustomersController extends Controller {
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('admin', 'delete'),
-                'users' => array('admin'),
+                'users' => array('admin','demo'),
             ),
             array('deny', // deny all users
                 'users' => array('*'),
@@ -94,13 +94,17 @@ class CustomersController extends Controller {
 
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
+        
         if (isset($_POST['Customers'])) {
             $model->attributes = $_POST['Customers'];
+            $model->c_date_of_birth = $this->StrToTime($model->year, $model->month, $model->day);
             if ($model->save())
                 $this->redirect(array('view', 'id' => $model->c_id));
         }
-
+        $arrDate=explode('-',$model->c_date_of_birth);
+        $model->year =$arrDate[0];
+        $model->month =$arrDate[1];
+        $model->day =$arrDate[2];
         $this->render('update', array(
             'model' => $model,
         ));
@@ -172,5 +176,6 @@ class CustomersController extends Controller {
         $date = $year . '-' . $month . '-' . $day;
         return date('Y-m-d', strtotime($date));
     }
-
+    
+    
 }

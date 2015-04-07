@@ -15,7 +15,7 @@
 
                         <div class="widget-header">
                             <i class="icon-user"></i>
-                            <?php if (!isset($model->c_id)) { ?> <h3>Add Vehicle</h3><?php } else { ?><h3>Update Vehicle: <?php echo $model->c_name . "(" . $model->c_id . ")"; ?></h3><?php } ?>
+                            <?php if (!isset($model->vehicle_id)) { ?> <h3>Add Vehicle</h3><?php } else { ?><h3>Update Vehicle: <?php echo $model->vehicle_name . "(" . $model->vehicle_id . ")"; ?></h3><?php } ?>
                         </div> <!-- /widget-header -->
 
                         <div class="widget-content">
@@ -65,7 +65,7 @@
                                             <div class="control-group">
                                                 <?php echo $form->labelEx($model, 'vehicle_year', array('class' => 'control-label')); ?>
                                                 <div class="controls">
-                                                    <?php echo $form->textField($model, 'vehicle_year', array('size' => 10, 'maxlength' => 10, 'class' => 'input-medium')); ?>
+                                                    <?php echo $form->dropDownList($model,'vehicle_year',  CommonFunctions::getRangeYears(2010), array('style'=>'width:100px')); ?>
                                                     <?php echo $form->error($model, 'vehicle_year'); ?>
                                                 </div>
                                             </div>
@@ -146,6 +146,7 @@
 
                                             <div class="form-actions">
                                                 <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-primary')); ?>
+                                                <?php echo CHtml::resetButton('Reset',array('class' => 'btn')); ?>
                                             </div>
                                         </fieldset>
                                         <?php $this->endWidget(); ?>

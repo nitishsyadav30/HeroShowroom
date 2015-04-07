@@ -47,8 +47,9 @@ $('.search-form form').submit(function(){
                                 'dataProvider' => $model->search(),
                                 'filter' => $model,
                                 'columns' => array(
+                                    'c_id',
                                     'c_name',
-                                    'c_bill_id',
+                                    
                                     'c_mobile',
                                     'c_city',
                                     

@@ -61,6 +61,7 @@ return array(
           'db'=>array(
           'connectionString' => 'mysql:host=localhost;dbname=heroshowroom',
           'emulatePrepare' => true,
+          'enableParamLogging'=> true,
           'username' => 'root',
           'password' => '',
           'charset' => 'utf8',
@@ -85,11 +86,11 @@ return array(
                     'levels' => 'error, warning',
                 ),
             // uncomment the following to show log messages on web pages
-            /*
-              array(
-              'class'=>'CWebLogRoute',
-              ),
-             */
+            
+//              array(
+//              'class'=>'CWebLogRoute',
+//              ),
+//             
             ),
         ),
     ),

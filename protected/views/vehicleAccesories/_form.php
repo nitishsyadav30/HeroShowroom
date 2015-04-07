@@ -3,68 +3,114 @@
 /* @var $model VehicleAccesories */
 /* @var $form CActiveForm */
 ?>
+<div class="main">
+    <div class="main-inner">
 
-<div class="form">
+        <div class="container">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'vehicle-accesories-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// There is a call to performAjaxValidation() commented in generated controller code.
-	// See class documentation of CActiveForm for details on this.
-	'enableAjaxValidation'=>false,
-)); ?>
+            <div class="row">    
+                <div class="span7">  
+                    <div class="widget ">
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+                        <div class="widget-header">
+                            <i class="icon-user"></i>
+                            <?php if (!isset($model->accessory_id)) { ?> <h3>Add Accesories</h3><?php } else { ?><h3>Update Accesories: <?php echo $model->acessory_name . "(" . $model->accessory_id . ")"; ?></h3><?php } ?>
+                        </div> <!-- /widget-header -->
 
-	<?php echo $form->errorSummary($model); ?>
+                        <div class="widget-content">
+                            <div class="tabbable">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="profile">
+                                        <?php
+                                        $form = $this->beginWidget('CActiveForm', array(
+                                            'id' => 'vehicle-accesories-form',
+                                            'htmlOptions' => array(
+                                                
+                                                'class' => 'form-horizontal'),
+                                            // Please note: When you enable ajax validation, make sure the corresponding
+                                            // controller action is handling ajax validation correctly.
+                                            // There is a call to performAjaxValidation() commented in generated controller code.
+                                            // See class documentation of CActiveForm for details on this.
+                                            'enableAjaxValidation' => false,
+                                        ));
+                                        ?>
+                                         <fieldset>
+                                        
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fk_vehicle_id'); ?>
-		<?php echo $form->textField($model,'fk_vehicle_id'); ?>
-		<?php echo $form->error($model,'fk_vehicle_id'); ?>
-	</div>
+                                        <?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'acessory_name'); ?>
-		<?php echo $form->textField($model,'acessory_name',array('size'=>60,'maxlength'=>200)); ?>
-		<?php echo $form->error($model,'acessory_name'); ?>
-	</div>
+                                        <div class="control-group">
+                                            <?php echo $form->labelEx($model, 'fk_vehicle_id', array('class' => 'control-label')); ?>
+                                            <div class="controls">
+                                            <?php echo $form->dropDownList($model,'fk_vehicle_id',  CommonFunctions::fetchRecords(), array('style'=>'width:220px')); ?>
+                                                <p class="help-block">(Name|Model|Color|Year)</p>
+                                            <?php echo $form->error($model, 'fk_vehicle_id'); ?>
+                                            </div>
+                                        </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'acessory_description'); ?>
-		<?php echo $form->textArea($model,'acessory_description',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'acessory_description'); ?>
-	</div>
+                                        <div class="control-group">
+                                            <?php echo $form->labelEx($model, 'acessory_name', array('class' => 'control-label')); ?>
+                                            <div class="controls">
+                                            <?php echo $form->textField($model, 'acessory_name', array('size' => 60, 'maxlength' => 200)); ?>
+                                            <?php echo $form->error($model, 'acessory_name'); ?>
+                                            </div>
+                                        </div>
+                                             
+                                        <div class="control-group">
+                                            <?php echo $form->labelEx($model, 'accesories_makers_id', array('class' => 'control-label')); ?>
+                                            <div class="controls">
+                                            <?php echo $form->textField($model, 'accesories_makers_id', array('size' => 60, 'maxlength' => 200)); ?>
+                                            <?php echo $form->error($model, 'accesories_makers_id'); ?>
+                                            </div>
+                                        </div>     
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'added_on'); ?>
-		<?php echo $form->textField($model,'added_on'); ?>
-		<?php echo $form->error($model,'added_on'); ?>
-	</div>
+                                        <div class="control-group">
+                                            <?php echo $form->labelEx($model, 'acessory_description', array('class' => 'control-label')); ?>
+                                            <div class="controls">
+                                            <?php echo $form->textArea($model, 'acessory_description', array('rows' => 6, 'cols' => 50)); ?>
+                                            <?php echo $form->error($model, 'acessory_description'); ?>
+                                            </div>
+                                        </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fk_added_by'); ?>
-		<?php echo $form->textField($model,'fk_added_by'); ?>
-		<?php echo $form->error($model,'fk_added_by'); ?>
-	</div>
+                                        <div class="form-actions">
+                                            <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array('class'=>'btn btn-primary')); ?>
+                                            <?php echo CHtml::resetButton('Clear',array('class'=>'btn')); ?>
+                                        </div>
+                                         </fieldset>
+                                        <?php $this->endWidget(); ?>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'updated_on'); ?>
-		<?php echo $form->textField($model,'updated_on'); ?>
-		<?php echo $form->error($model,'updated_on'); ?>
-	</div>
+                                    </div> <!--Tab content-->                                    
+                                </div> <!--tab pane-->  
+                            </div>
+                        </div> <!--Widget Content-->                                    
+                    </div> <!--Widget-->                                
+                </div> <!--Span 8-->    
+                <div class="span4">
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'fk_updated_by'); ?>
-		<?php echo $form->textField($model,'fk_updated_by'); ?>
-		<?php echo $form->error($model,'fk_updated_by'); ?>
-	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-	</div>
+                    <div class="widget widget-box">
 
-<?php $this->endWidget(); ?>
+                        <div class="widget-header" >
+                            <i class="icon-bookmark"></i>
+                            <h3 >Quick Shortcuts</h3>
+                        </div> <!-- /widget-header -->
 
-</div><!-- form -->
+                        <div class="widget-content">
+                            <div class="shortcuts">
+                                <a href="<?php echo Yii::app()->createUrl('vehicleAccesories/admin'); ?>" class="shortcut">
+                                    <i class="shortcut-icon icon-cogs"></i>
+                                    <span class="shortcut-label">Manage Accesories</span>
+                                </a>
+
+
+                            </div> <!-- /shortcuts -->	
+                        </div> <!-- /widget-content -->
+
+                    </div> <!-- /widget-box -->
+
+                </div> <!-- /span4 -->
+            </div>  
+        </div>    
+    </div>   
+</div>    
+

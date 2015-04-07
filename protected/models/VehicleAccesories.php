@@ -36,12 +36,13 @@ class VehicleAccesories extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('fk_vehicle_id, acessory_name, acessory_description, added_on, fk_added_by, updated_on, fk_updated_by', 'required'),
+			array('fk_vehicle_id, acessory_name, acessory_description', 'required'),
 			array('fk_vehicle_id, fk_added_by, fk_updated_by', 'numerical', 'integerOnly'=>true),
 			array('acessory_name', 'length', 'max'=>200),
+                        array('accesories_makers_id', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('accessory_id, fk_vehicle_id, acessory_name, acessory_description, added_on, fk_added_by, updated_on, fk_updated_by', 'safe', 'on'=>'search'),
+			array('accessory_id, fk_vehicle_id, acessory_name,accesories_makers_id, acessory_description, added_on, fk_added_by, updated_on, fk_updated_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,8 +67,9 @@ class VehicleAccesories extends CActiveRecord
 	{
 		return array(
 			'accessory_id' => 'Accessory',
-			'fk_vehicle_id' => 'Fk Vehicle',
+			'fk_vehicle_id' => 'Select Vehicle',
 			'acessory_name' => 'Acessory Name',
+                        'accesories_makers_id' => 'Accessory Makers Id',
 			'acessory_description' => 'Acessory Description',
 			'added_on' => 'Added On',
 			'fk_added_by' => 'Fk Added By',
@@ -97,6 +99,7 @@ class VehicleAccesories extends CActiveRecord
 		$criteria->compare('accessory_id',$this->accessory_id);
 		$criteria->compare('fk_vehicle_id',$this->fk_vehicle_id);
 		$criteria->compare('acessory_name',$this->acessory_name,true);
+                $criteria->compare('accesories_makers_id',$this->accesories_makers_id,true);
 		$criteria->compare('acessory_description',$this->acessory_description,true);
 		$criteria->compare('added_on',$this->added_on,true);
 		$criteria->compare('fk_added_by',$this->fk_added_by);
